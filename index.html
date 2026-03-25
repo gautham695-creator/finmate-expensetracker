@@ -1,0 +1,30 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FinMate - Login/Register</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <h1 class="brand">FinMate</h1>
+    <p class="tagline">Your Smart Expense Buddy</p>
+
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <button onclick="login()" class="btn login-btn">Login</button>
+    <button onclick="register()" class="btn register-btn">Register</button>
+
+    <p id="auth-message" class="message"></p>
+  </div>
+
+  <!-- Firebase & App Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

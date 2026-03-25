@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FinMate - Analyze</title>
+  <link rel="stylesheet" href="sty1.css" />
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-header">
+    <h2>Expense Analysis</h2>
+    <button onclick="goBack()" class="btn logout-btn">Back</button>
+  </header>
+
+  <main class="dashboard-main">
+    <canvas id="barChart" width="300" height="200"></canvas>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/analyze.js"></script>
+</body>
+</html>

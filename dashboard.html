@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FinMate - Dashboard</title>
+  <link rel="stylesheet" href="sty1.css" />
+</head>
+<body class="dashboard-body">
+  <header class="dashboard-header">
+    <h2>Welcome to FinMate</h2>
+    <button onclick="logout()" class="btn logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="expense-form">
+      <h3>Add Expense</h3>
+      <input type="text" id="desc" placeholder="Description" />
+      <input type="number" id="amount" placeholder="Amount" />
+      <select id="category">
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+        <option value="clothing">Clothing</option>
+        <option value="other">Other</option>
+      </select>
+      <button onclick="addExpense()" class="btn add-btn">Add</button>
+    </section>
+
+    <section class="budget-progress">
+      <h3>Budget Usage</h3>
+      <div id="budget-bars"></div>
+    </section>
+
+    <section class="expense-list">
+      <h3>Your Expenses</h3>
+      <div id="expenses"></div>
+    </section>
+
+    <button onclick="goToAnalyze()" class="btn analyze-btn">Analyze Expenses</button>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
